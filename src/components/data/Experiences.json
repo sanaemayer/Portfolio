@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Varicent",
+    "location": "Fully Remote (Toronto, ON)",
+    "image": "/images/PclHQ.png",
+    "descriptions": [
+      {
+        "title": "About the Team",
+        "texts": [
+          "During my time at Varicent, my work has primarily centered around maintaining an <b>ELT (Extract, Load, Transform)</b> web application called Symon. This tool allows users to <b>import data</b> from various sources such as ICM, Salesforce, CSV files, and more. Users can then create <b>transformation pipelines</b>, ranging from simple tasks like joins or renames to more advanced processes, including machine learning tools that predict data. The final step involves <b>exporting the results</b> back to the original sources or other destinations similar to the ones used for import.",
+          "Our team's focus was on optimizing the series of calculations within the tool, which involves submitting <b>Python</b> or <b>Spark</b> jobs to <b>Kubernetes</b> via <b>Redis</b>. Our primary goal was to enhance performance, improve scalability, and reduce errors in each calculation, all while ensuring no changes were made that could affect the functionality of existing pipelines."
+        ]
+      },
+      {
+        "title": "Leading a quality initiative project focused on improving error handling and providing user-friendly error messages, reducing support team escalations and enabling developers to diagnose issues more efficiently.",
+        "texts": [
+          "This project focuses on enhancing the experiences of users, developers, and the support team. For users, the goal was to improve error visibility by clearly identifying which specific tool within the pipeline failed and by translating error messages into more user-friendly formats. For developers, we worked on replacing broad error messages in the Step Function with more detailed messages directly from Kubernetes, and provided a direct link to the CloudWatch logs, making it easier to trace issues. For the support team, the improvements to error messaging help them recognize known issues more quickly, allowing them to apply workarounds when needed, rather than having to escalate vague or generic errors.",
+          "Additionally, the Splunk dashboard, which tracks weekly error messages over the past few months, was significantly optimized. Initially, the dashboard took around 40 minutes to load due to the need to process millions of logs and perform aggregation. By utilizing a search index to run queries in the background and store data for the dashboard, I was able to make the dashboard load instantly. This improvement greatly enhanced the quality of data access for managers and higher-ups."
+        ]
+      },
+      {
+        "title": "Developed AWS cost optimization project by automating the scaling reducing monthly costs while maintaining system readiness",
+        "texts": [
+          "I developed an automated <b>CodeBuild</b> pipeline for the Cloud Operations team that manages our staging environment. This solution dynamically scales down resources after a production release and scales them back up during branch-specific development days. The process involves pausing or terminating, and then respawning various AWS resources, including <b>RDS</b>, <b>ECS</b>, <b>Elasticache</b>, and <b>EKS</b>.",
+          "When the staging environment is scaled down, the cost of running that environment is reduced to just <b>30% of its usual cost</b>, resulting in significant savings. Of course, if hotfixes are required or the environment needs to be available for a longer period, scaling down is not possible, and the cost remains."
+        ]
+      }
+    ],
+    "titles": [
+      {
+        "title": "Intermediate Software Developer",
+        "date": "Aug. 20122 – Current"
+      },
+      {
+        "title": "Associate Software Developer",
+        "date": "Sept. 2021 – Aug. 2022"
+      }
+    ],
+    "tools": [
+      { "source": "/images/aws.png", "name": "AWS" },
+      { "source": "/images/terraform.png", "name": "Terraform" },
+      { "source": "/images/kubernetes.png", "name": "Kubernetes" }
+    ]
+  },
+  {
+    "name": "PCL Construction",
+    "location": "Edmonton, AB",
+    "image": "/images/PclHQ.png",
+    "descriptions": [
+      {
+        "title": "Contributed to the migration of JD EnterpriseOne to a newer version, collaborating with the QA team to identify and resolve bugs, while retrofitting the system to ensure it performed seamlessly, just like the old version.",
+        "texts": [
+          "I was tasked with quickly mastering both the software’s architecture and the development process due to the <b>tight migration deadline</b>. The new software came with pre-existing code from Oracle, but due to the need for custom functionalities, significant retrofitting was required to ensure <b>no loss of features or functionality</b> during the transition.",
+          "Throughout the migration, I took on the responsibility of collaborating directly with the QA team to <b>identify</b>, <b>replicate</b>, and <b>resolve issues</b>. This included debugging, implementing fixes, and deploying updates to ensure smooth functionality. Thanks to clear communication and proactive problem-solving, we successfully delivered the upgraded software on time, meeting all requirements and expectations."
+        ]
+      },
+      {
+        "title": "Designed and implemented a fully custom ServiceNow form from the ground up, simplifying the process for managers to assign the right permissions across the district based on access requests.",
+        "texts": [
+          "Most of my work has been on the backend side of development, but I also contributed to <b>fully designing</b> and <b>developing</b> a user account permission routing form to allocate permissions to managers across districts. Although my work were primarily focused on the backend, I gained some <b>full-stack experience</b> by working on the form's implementation and ensuring a seamless user experience.",
+          "While the process was facilitated by an existing UI framework for creating and testing the form, I gained valuable insights into how frontend and backend systems communicate. This project reinforced the importance of considering <b>user experience</b>, and although I didn't directly observe the form's usage, I successfully completed and deployed it."
+        ]
+      }
+    ],
+    "titles": [
+      {
+        "title": "Financial Software Developer",
+        "date": "Sept. 2018 – Aug. 2019"
+      }
+    ],
+    "tools": [
+      {
+        "source": "/images/oracleJDE.png",
+        "name": "Oracle JDE EnterpriseOne"
+      },
+      { "source": "/images/serviceNow.png", "name": "ServiceNow" }
+    ]
+  }
+]

@@ -1,0 +1,665 @@
+/* Global Styles */
+:root {
+  --bs-ua-dark-green: #275d38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+  background-color: #2c3e50; /* Elegant deep grayish-blue */
+  color: white;
+  padding: 20px 0;
+  top: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.header-logos {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: auto;
+  height: 50px;
+}
+
+.header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header .logo h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header .logo h1:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover {
+  color: #3498db; /* Soft accent color */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Sticky Effect */
+.header.sticky {
+  background-color: #34495e; /* Slightly darker shade on scroll */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Home Section */
+.home-section {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+.home-section p {
+  font-family: "Lato", serif;
+  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-description {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-out;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #3498db;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  animation: fadeIn 2.5s ease-out;
+}
+
+.cta-button:hover {
+  background-color: #8e44ad;
+  color: white;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #ffffff;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.about-section h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.about-section h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.about-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 25px;
+}
+
+/* Container for the grid */
+.about-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 16px; /* space between items */
+  margin: 50px auto;
+  max-width: 1200px; /* Optional, max width for large screens */
+}
+
+/* Style each image item */
+.about-image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Ensures images fit well within their containers */
+}
+
+.about-text {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/* Experience Section */
+.experience-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #ffffff;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.experience-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 30px;
+  color: #555;
+  white-space: pre-wrap;
+}
+
+.experience-section h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.experience-section h2 {
+  font-size: 35px;
+}
+
+.experience-section h3 {
+  font-size: 28px;
+}
+
+.experience-section h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.experience-image {
+  flex: 0 0 50%; /* Ensure the image takes up exactly 33% of the container's width */
+  object-fit: cover; /* Ensures the image covers the space while maintaining its aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 50%;
+  min-width: 33%;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100px); /* Start off-screen */
+  transition: all 0.6s ease-in-out;
+}
+
+.experience-logo-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 50px;
+}
+
+.experience-logo-container {
+  position: relative;
+  display: inline-block;
+  flex: 1;
+  text-align: center;
+}
+
+.experience-logo-container:hover .experience-logo-text-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+.experience-logo {
+  object-fit: cover;
+  height: auto;
+  max-width: 90px;
+}
+
+.experience-logo-text-container {
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 120px; /* Adjust width */
+  margin: 0 auto;
+}
+
+.experience-text {
+  flex: 0 0 50%; /* The text takes up the remaining space */
+  opacity: 0;
+  transform: translateX(-100px); /* Start off-screen */
+  transition: all 0.6s ease-in-out;
+}
+
+.experience-detail-container {
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(100px); /* Start off-screen */
+  transition: all 0.6s ease-in-out;
+}
+
+.experience-detail-container h4 {
+  margin: 40px 0;
+}
+
+.experience-detail-container p {
+  margin: 20px 50px;
+}
+
+.experience-detail-text {
+  margin-bottom: 50px;
+}
+
+.experience-detail-image {
+  align-items: center;
+  object-fit: cover;
+  max-width: 70%;
+}
+
+.education-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #ffffff;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.education-section h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 50px;
+}
+
+.education-image {
+  flex: 0 0 66%; /* Ensure the image takes up exactly 33% of the container's width */
+  object-fit: cover; /* Ensures the image covers the space while maintaining its aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 66%;
+  min-width: 33%;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Start off-screen */
+  transition: all 0.6s ease-in-out;
+}
+
+.education-text {
+  flex: 0 0 33%; /* The text takes up the remaining space */
+  padding: 20px;
+  text-align: center;
+  flex-wrap: wrap;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100px); /* Start off-screen to the left */
+  transition: all 0.6s ease-in-out; /* Smooth transition */
+}
+
+/* Slide-in animation */
+
+.education-image.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide into view from the left */
+}
+
+.education-text.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide into view from the left */
+}
+
+.experience-image.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide into view from the left */
+}
+
+.experience-text.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide into view from the left */
+}
+
+.experience-detail-container.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide into view from the left */
+}
+
+/* Projects Section */
+.projects-section {
+  height: 66%;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.projects-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 10%;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  text-align: left;
+  margin-bottom: 40px;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.project-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #8e44ad;
+}
+
+/* Hover effect on project cards */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Me Section */
+.contact-section {
+  background-color: #ffffff; /* Light background for contact section */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for a modern look */
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3498db; /* Blue border on focus */
+}
+
+.contact-form button {
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+  .header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show links when mobile menu is toggled */
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .about-container {
+    flex-direction: column; /* Stacks the image and text on smaller screens */
+    padding: 0;
+    margin: 0;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .education-image {
+    flex: 0 0 100%; /* Image will take up full width */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio on smaller screens */
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .education-text {
+    flex: 0 0 100%; /* Text will also take full width */
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .experience-image {
+    flex: 0 0 100%; /* Image will take up full width */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio on smaller screens */
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .experience-text {
+    flex: 0 0 100%; /* Text will also take full width */
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .experience-detail-container {
+    opacity: 1;
+    transform: translateY(0); /* Start off-screen */
+  }
+
+  .experience-logo-text-container {
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 20px;
+  }
+}
+
+/* Widescreen: when the screen width is larger than 1200px (or your desired threshold) */
+@media (min-width: 2000px) {
+  .about-image {
+    flex: 0 0 50%; /* On larger screens, the image will take up 50% of the container width */
+    max-width: 50%; /* Ensure image doesn't exceed half of the container's width */
+  }
+
+  .about-text {
+    flex: 0 0 50%; /* Text will also take up the remaining 50% */
+  }
+
+  .education-image {
+    max-width: 50%;
+  }
+
+  .education-text {
+    flex: 0 0 50%; /* The text takes up the remaining space */
+  }
+}
