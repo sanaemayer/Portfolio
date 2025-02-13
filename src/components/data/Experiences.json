@@ -2,7 +2,7 @@
   {
     "name": "Varicent",
     "location": "Fully Remote (Toronto, ON)",
-    "image": "/images/PclHQ.png",
+    "image": "/images/symonai.png",
     "descriptions": [
       {
         "title": "About the Team",
@@ -14,8 +14,8 @@
       {
         "title": "Leading a quality initiative project focused on improving error handling and providing user-friendly error messages, reducing support team escalations and enabling developers to diagnose issues more efficiently.",
         "texts": [
-          "This project focuses on enhancing the experiences of users, developers, and the support team. For users, the goal was to improve error visibility by clearly identifying which specific tool within the pipeline failed and by translating error messages into more user-friendly formats. For developers, we worked on replacing broad error messages in the Step Function with more detailed messages directly from Kubernetes, and provided a direct link to the CloudWatch logs, making it easier to trace issues. For the support team, the improvements to error messaging help them recognize known issues more quickly, allowing them to apply workarounds when needed, rather than having to escalate vague or generic errors.",
-          "Additionally, the Splunk dashboard, which tracks weekly error messages over the past few months, was significantly optimized. Initially, the dashboard took around 40 minutes to load due to the need to process millions of logs and perform aggregation. By utilizing a search index to run queries in the background and store data for the dashboard, I was able to make the dashboard load instantly. This improvement greatly enhanced the quality of data access for managers and higher-ups."
+          "This project focuses on enhancing the experiences of users, developers, and the support team. For users, the goal was to improve error visibility by clearly identifying which specific tool within the pipeline failed and by translating error messages into more user-friendly formats. For developers, we worked on replacing broad error messages in the <b>Step Function</b> with more detailed messages directly from <b>Kubernetes</b>, and provided a direct link to the <b>CloudWatch</b> logs, making it easier to trace issues. For the support team, the improvements to error messaging help them recognize known issues more quickly, allowing them to apply workarounds when needed, rather than having to escalate vague or generic errors.",
+          "Additionally, the <b>Splunk</b> dashboard, which tracks weekly error messages over the past few months, was significantly optimized. Initially, the dashboard took around 40 minutes to load due to the need to process millions of logs and perform aggregation. By utilizing a search index to run queries in the background and store data for the dashboard, I was able to make the dashboard load instantly. This improvement greatly enhanced the quality of data access for managers and higher-ups."
         ]
       },
       {
