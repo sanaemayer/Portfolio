@@ -633,8 +633,13 @@ footer {
   }
 
   .experience-detail-container {
+    margin: 0;
     opacity: 1;
     transform: translateY(0); /* Start off-screen */
+  }
+
+  .experience-logo-row {
+    margin: 30px 0;
   }
 
   .experience-logo-text-container {
