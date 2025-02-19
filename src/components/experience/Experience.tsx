@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./experience.scss";
 import experienceJson from "./data/Experiences.json";
 import ExperienceTabs from "./ExperienceTabs";
+import { isMobile } from "../utils/utils";
 
 type experience = {
   name: string;
@@ -58,22 +59,24 @@ const Experience: React.FC = () => {
               </div>
             ))}
 
-            <div className="logo-row">
-              {experience.tools.map((tool, index) => (
-                <div
-                  className="logo-container"
-                  key={experience.name + "-tool-" + index}
-                >
-                  <img
-                    src={process.env.PUBLIC_URL + tool.source}
-                    className="logo"
-                  />
-                  <div className="logo-text-container">
-                    <div className="logo-text">{tool.name}</div>
+            {
+              <div className="logo-row">
+                {experience.tools.map((tool, index) => (
+                  <div
+                    className="logo-container"
+                    key={experience.name + "-tool-" + index}
+                  >
+                    <img
+                      src={process.env.PUBLIC_URL + tool.source}
+                      className="logo"
+                    />
+                    <div className="logo-text-container">
+                      <div className="logo-text">{tool.name}</div>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            }
           </div>
           <img
             className={`image ${isVisible ? "slide-in" : ""}`}
@@ -85,16 +88,17 @@ const Experience: React.FC = () => {
             <div>
               {experience.about.length > 0 && (
                 <div>
-                  {/* <h4>About the Team</h4> */}
-                  <div className="detail-icons">
-                    {experience.icons?.map((icon, index) => (
-                      <img
-                        key={"detail-icon-" + index}
-                        src={process.env.PUBLIC_URL + icon}
-                        className="detail-icon"
-                      />
-                    ))}
-                  </div>
+                  {!isMobile() && (
+                    <div className="detail-icons">
+                      {experience.icons?.map((icon, index) => (
+                        <img
+                          key={"detail-icon-" + index}
+                          src={process.env.PUBLIC_URL + icon}
+                          className="detail-icon"
+                        />
+                      ))}
+                    </div>
+                  )}
                   {experience.about.map((text, index) => (
                     <p
                       key={"detail-about-" + index}
