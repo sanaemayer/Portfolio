@@ -1,0 +1,143 @@
+.education {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #ffffff;
+  animation: fadeIn 1.5s ease-out;
+
+  h1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 50px;
+
+    .image {
+      flex: 0 0 66%; /* Ensure the image takes up exactly 33% of the container's width */
+      object-fit: cover; /* Ensures the image covers the space while maintaining its aspect ratio */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 66%;
+      min-width: 33%;
+      opacity: 0; /* Initially hidden */
+      transform: translateY(100px); /* Start off-screen */
+      transition: all 0.6s ease-in-out;
+
+      &.slide-in {
+        opacity: 1;
+        transform: translateX(0); /* Slide into view from the left */
+      }
+
+      @media (max-width: 1000px) {
+        flex: 0 0 100%; /* Image will take up full width */
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio on smaller screens */
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      @media (min-width: 2000px) {
+        max-width: 50%;
+      }
+    }
+
+    .text {
+      flex: 0 0 33%; /* The text takes up the remaining space */
+      padding: 20px;
+      text-align: center;
+      flex-wrap: wrap;
+      opacity: 0; /* Initially hidden */
+      transform: translateX(100px); /* Start off-screen to the left */
+      transition: all 0.6s ease-in-out; /* Smooth transition */
+
+      &.slide-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      @media (max-width: 1000px) {
+        flex: 0 0 100%; /* Text will also take full width */
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      @media (min-width: 2000px) {
+        flex: 0 0 50%; /* The text takes up the remaining space */
+      }
+    }
+  }
+}
+
+/* Projects Section */
+.projects {
+  height: 66%;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 10%;
+
+    .card {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 320px;
+      text-align: left;
+      margin-bottom: 40px;
+      transform: scale(1);
+      overflow: hidden;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        :hover {
+          color: #8e44ad;
+        }
+      }
+
+      &.move-left {
+        transition: 0.6s ease-in-out;
+        grid-column: 1;
+      }
+
+      :hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .links {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+}

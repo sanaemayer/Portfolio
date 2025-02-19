@@ -1,18 +1,19 @@
 import React from "react";
+import "./header.scss";
 
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <div className="header-container">
+      <div className="container">
         <h1>My Portfolio</h1>
-        <div className="header-logos">
+        <div className="logos">
           <a
             href="https://github.com/sanaemayer"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              className="header-logo"
+              className="logo"
               src={process.env.PUBLIC_URL + "/images/github.png"}
             />
           </a>
@@ -23,7 +24,7 @@ const Header: React.FC = () => {
             rel="noopener noreferrer"
           >
             <img
-              className="header-logo"
+              className="logo"
               src={process.env.PUBLIC_URL + "/images/linkedin.png"}
             />
           </a>

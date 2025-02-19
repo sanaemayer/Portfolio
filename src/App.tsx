@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "./styles/styles.css";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import "./styles/global.scss";
+import Home from "./components/home/Home";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
 
 const App: React.FC = () => {
   useEffect(() => {

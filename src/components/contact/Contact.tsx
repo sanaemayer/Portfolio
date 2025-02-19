@@ -1,6 +1,7 @@
 // Contact.tsx
 import React, { useState } from "react";
 import emailjs from "emailjs-com"; // Import EmailJS
+import "./contact.scss";
 
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<string>("");
@@ -32,11 +33,11 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="contact-section">
+    <div className="contact">
       <h1>Contact Me</h1>
 
       {/* Contact Form */}
-      <form className="contact-form" onSubmit={sendEmail}>
+      <form className="form" onSubmit={sendEmail}>
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>

@@ -26,32 +26,30 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="projects-section">
-      <div className="container">
-        <div className="projects-list">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-links">
-                <a
-                  href={project.gitLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-                <a
-                  href={project.videoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Video
-                </a>
-              </div>
+    <section id="projects" className="projects">
+      <div className="cards">
+        {projects.map((project, index) => (
+          <div key={index} className="card">
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div className="links">
+              <a
+                href={project.gitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+              <a
+                href={project.videoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Video
+              </a>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

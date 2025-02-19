@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./education.scss";
 import Projects from "./Projects";
 
 const Education: React.FC = () => {
@@ -32,19 +33,16 @@ const Education: React.FC = () => {
   }, []);
 
   return (
-    <section id="education" className="education-section">
+    <section className="education">
       <h1>Education</h1>
       {/* UofA */}
-      <div ref={imageRef} className="education-container" id="education">
+      <div ref={imageRef} className="container">
         <img
-          className={`education-image ${isVisible ? "slide-in" : ""}`}
+          className={`image ${isVisible ? "slide-in" : ""}`}
           src={process.env.PUBLIC_URL + "/images/UniversityOfAlberta.png"}
           alt="University of Alberta Campus"
         />
-        <div
-          ref={textRef}
-          className={`education-text ${isVisible ? "slide-in" : ""}`}
-        >
+        <div ref={textRef} className={`text ${isVisible ? "slide-in" : ""}`}>
           <Projects />
         </div>
       </div>
