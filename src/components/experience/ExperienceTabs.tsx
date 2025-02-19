@@ -20,7 +20,7 @@ function CustomTabPanel(props: TabPanelProps) {
       aria-labelledby={`description-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ p: 2 }}>{children}</Box>}
     </div>
   );
 }
@@ -42,7 +42,7 @@ const ExperienceTabs = (props: { experience: experience }) => {
   const experience = props.experience;
 
   return (
-    <section>
+    <section className="experience-tabs">
       <Tabs value={value} onChange={handleChange} centered>
         {experience.descriptions.map((description, index) => (
           <Tab

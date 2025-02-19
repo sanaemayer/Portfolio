@@ -118,19 +118,19 @@
         font-weight: 600;
         transition: color 0.3s ease;
 
-        :hover {
+        &:hover {
           color: #8e44ad;
         }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
       }
 
       &.move-left {
         transition: 0.6s ease-in-out;
         grid-column: 1;
-      }
-
-      :hover {
-        transform: scale(1.05);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
       }
 
       .links {
