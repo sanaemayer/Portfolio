@@ -43,7 +43,10 @@
     "tools": [
       { "source": "/images/aws.png", "name": "AWS" },
       { "source": "/images/terraform.png", "name": "Terraform" },
-      { "source": "/images/kubernetes.png", "name": "Kubernetes" }
+      { "source": "/images/kubernetes.png", "name": "Kubernetes" },
+      { "source": "/images/docker.png", "name": "Docker" },
+      { "source": "/images/nodejs.png", "name": "Node JS" },
+      { "source": "/images/python.png", "name": "Python" }
     ]
   },
   {

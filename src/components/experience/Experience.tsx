@@ -59,24 +59,22 @@ const Experience: React.FC = () => {
               </div>
             ))}
 
-            {
-              <div className="logo-row">
-                {experience.tools.map((tool, index) => (
-                  <div
-                    className="logo-container"
-                    key={experience.name + "-tool-" + index}
-                  >
-                    <img
-                      src={process.env.PUBLIC_URL + tool.source}
-                      className="logo"
-                    />
-                    <div className="logo-text-container">
-                      <div className="logo-text">{tool.name}</div>
-                    </div>
+            <div className="logo-row">
+              {experience.tools.map((tool, index) => (
+                <div
+                  className="logo-container"
+                  key={experience.name + "-tool-" + index}
+                >
+                  <img
+                    src={process.env.PUBLIC_URL + tool.source}
+                    className="logo"
+                  />
+                  <div className="logo-text-container">
+                    <div className="logo-text">{tool.name}</div>
                   </div>
-                ))}
-              </div>
-            }
+                </div>
+              ))}
+            </div>
           </div>
           <img
             className={`image ${isVisible ? "slide-in" : ""}`}
